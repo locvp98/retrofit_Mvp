@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llLink"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/size_30_dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custom_patelink"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtUrls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="55dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/pasteFB"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingStart="@dimen/size_16_dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/color_text_frag"
+            android:textColorHint="@color/color_text_frag"
+            android:textSize="@dimen/textsize_14_sp"
+            android:theme="@style/CustomEditText"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtPaste"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/rip_paste"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/paste"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btnDownload"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/llLink"
+        android:layout_marginStart="@dimen/size_30_dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custum_buttom"
+        app:mrl_rippleDimension="42dp"
+        app:mrl_rippleDuration="300"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleRoundedCorners="42dp">
+
+
+        <TextView
+            android:id="@+id/btnTryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/download"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            tools:ignore="SmallSp" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDownload"
+        android:layout_marginStart="@dimen/size_30_dp"
+        android:layout_marginTop="@dimen/size_20_dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custom_fragment_brow">
+
+        <LinearLayout
+            android:id="@+id/llOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_20_dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="52dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="#1c3048" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5_dp"
+                android:layout_marginRight="@dimen/size_5_dp"
+                android:text="@string/or"
+                android:textAllCaps="true"
+                android:textColor="@color/color_text_frag"
+                android:textSize="@dimen/textsize_16_sp" />
+
+            <View
+                android:layout_width="52dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="#1c3048" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/btnBrowsefb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50_dp"
+            android:layout_below="@id/llOr"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/size_20_dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rip_browse"
+            android:gravity="center"
+            android:text="@string/textBrowse"
+            android:textAllCaps="false"
+            android:textColor="#006dfe"
+            android:textSize="@dimen/textsize_14_sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBrowsefb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_16_dp"
+            android:layout_marginBottom="@dimen/size_16_dp"
+            android:gravity="center"
+            android:text="@string/text1Browse"
+            android:textColor="@color/color_text_frag"
+            android:textSize="@dimen/textsize_14_sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

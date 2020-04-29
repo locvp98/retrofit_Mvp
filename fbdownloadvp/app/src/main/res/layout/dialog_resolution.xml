@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ThemeDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="VectorDrawableCompat">
+
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/roundDialog"
+        app:corner_radius="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlSd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50_dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/size_14_dp"
+            android:layout_marginRight="16dp">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custum_buttom"
+                app:mrl_rippleColor="@color/colorWhite"
+                app:mrl_rippleDimension="42dp"
+                app:mrl_rippleDuration="300"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_rippleRoundedCorners="42dp">
+
+                <TextView
+                    android:id="@+id/btnSDDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/sdLoading"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spinKitSd"
+                style="@style/SpinKitView.Small.FadingCircle"
+                android:layout_width="@dimen/size_20_dp"
+                android:layout_height="@dimen/size_20_dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/size_16_dp"
+                app:SpinKit_Color="@color/colorWhite" />
+
+            <ImageView
+                android:id="@+id/imgIcLoad"
+                android:layout_width="@dimen/size_16_dp"
+                android:layout_height="@dimen/size_16_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/size_16_dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_download" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeHD"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50_dp"
+            android:layout_below="@+id/rlSd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/size_14_dp"
+            android:layout_marginRight="16dp">
+
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custum_buttom"
+                app:mrl_rippleColor="@color/colorWhite"
+                app:mrl_rippleDimension="42dp"
+                app:mrl_rippleDuration="300"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_rippleRoundedCorners="42dp">
+
+                <TextView
+                    android:id="@+id/btnHDDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/hdLoading"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spinKitHD"
+                style="@style/SpinKitView.Small.FadingCircle"
+                android:layout_width="@dimen/size_20_dp"
+                android:layout_height="@dimen/size_20_dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/size_16_dp"
+                app:SpinKit_Color="@color/colorWhite" />
+
+
+            <ImageView
+                android:id="@+id/imgIcLoadHD"
+                android:layout_width="@dimen/size_16_dp"
+                android:layout_height="@dimen/size_16_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/size_16_dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_download" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeWatchVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50_dp"
+            android:layout_below="@+id/relativeHD"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/size_14_dp"
+            android:layout_marginRight="16dp">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripWatch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_video"
+                app:mrl_rippleColor="@color/colorWhite"
+                app:mrl_rippleDimension="42dp"
+                app:mrl_rippleDuration="300"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_rippleRoundedCorners="42dp">
+
+                <Button
+                    android:id="@+id/btnWatchVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="@string/watchVideo"
+                    android:textAllCaps="false"
+                    android:textColor="#575757"
+                    android:textStyle="bold" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            <ImageView
+
+                android:layout_width="@dimen/size_14_dp"
+                android:layout_height="@dimen/size_14_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/size_16_dp"
+                app:srcCompat="@drawable/ic_play" />
+
+        </RelativeLayout>
+
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/txtClose"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeWatchVideo"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="@dimen/size_16_dp"
+            app:mrl_rippleColor="#DDDADA"
+            app:mrl_rippleDimension="42dp"
+            app:mrl_rippleDuration="300"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="42dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:padding="6dp"
+                android:textColor="@color/color_text_frag"
+                android:text="@string/close"
+                android:textSize="@dimen/textsize_16_sp" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+</RelativeLayout>

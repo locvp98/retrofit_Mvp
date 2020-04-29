@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/menu" />
+
+        <TextView
+            android:id="@+id/txt_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/imgLogo"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/titleApp"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:outlineAmbientShadowColor="@color/colorText"
+            android:outlineSpotShadowColor="@color/colorText"
+            android:paddingBottom="7dp"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/colorText"
+            app:lottie_fileName="anim/anim-trigger.json"
+            app:lottie_loop="true" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewTool"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/rlAppbar"
+        android:background="@drawable/custom_viewtab" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/viewTool"
+        app:tabIndicatorHeight="4dp"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpDownloader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabMain" />
+
+    <RelativeLayout
+        android:alpha="1"
+        android:visibility="gone"
+        android:id="@+id/rlView"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#80000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spinKit"
+            style="@style/SpinKitView.Small.FadingCircle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminateDuration="100"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            app:SpinKit_Color="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/icPer"
+        layout="@layout/layout_permision"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

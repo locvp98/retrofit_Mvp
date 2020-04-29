@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activities.SettingActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlAppbar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:id="@+id/imgBackSetting"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:layout_marginStart="4dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_back1"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/txt_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@+id/imgBackSetting"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/setting"
+                android:textColor="@color/colorText"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewTool"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/custom_viewtab" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llAdSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlAds"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_view_setting"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_frag_setting"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_st_policy"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:text="@string/policy"
+                android:textColor="@color/color_text_setting" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewAds"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:alpha="0.05"
+            android:layout_marginEnd="20dp"
+            android:background="@color/color_view_setting" />
+
+        <LinearLayout
+            android:id="@+id/llShareTo"
+            android:background="@drawable/rip_frag_setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_view_setting"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_st_share"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:text="@string/setting_share_to_friends"
+                android:textColor="@color/color_text_setting" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:alpha="0.05"
+            android:layout_marginEnd="20dp"
+            android:background="@color/color_view_setting" />
+
+        <LinearLayout
+            android:id="@+id/llRate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_view_setting"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_frag_setting"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_st_rate"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:text="@string/rate_us"
+                android:textColor="@color/color_text_setting" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:alpha="0.05"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/color_view_setting" />
+
+        <LinearLayout
+            android:id="@+id/llFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_view_setting"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_frag_setting"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_st_feedback"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:text="@string/feedback"
+                android:textColor="@color/color_text_setting" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:alpha="0.05"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/color_view_setting" />
+
+
+        <LinearLayout
+            android:id="@+id/llAbout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_view_setting"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_frag_setting"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                app:srcCompat="@drawable/ic_st_about"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:text="@string/about"
+                android:textColor="@color/color_text_setting" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

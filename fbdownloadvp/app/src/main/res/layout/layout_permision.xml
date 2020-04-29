@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:ignore="VectorDrawableCompat">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/imgIcPer"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_storage" />
+
+            <TextView
+                android:id="@+id/txtTitlePer1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:layout_below="@+id/imgIcPer"
+                android:textSize="15sp"
+                android:textColor="@color/color_text_frag"
+                android:text="@string/title_per1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtTitlePer2"
+                android:textSize="15sp"
+                android:textColor="@color/color_text_frag"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtTitlePer1"
+                android:text="@string/title_per2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/txtTitlePer2"
+                android:layout_height="50dp"
+                android:layout_marginStart="102dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="102dp"
+                android:background="@drawable/custum_buttom"
+                app:mrl_rippleColor="@color/colorWhite"
+                app:mrl_rippleDimension="42dp"
+                app:mrl_rippleDuration="300"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_rippleRoundedCorners="42dp">
+
+            <TextView
+                android:id="@+id/btnCheckPer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/Allow"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                tools:ignore="SmallSp" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+        </RelativeLayout>
+</RelativeLayout>

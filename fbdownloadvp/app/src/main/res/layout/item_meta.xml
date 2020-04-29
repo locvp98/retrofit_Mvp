@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sound.fbdownloder.ui.custum.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="3dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="3dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgVideoWhat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_view" />
+
+    <ImageView
+        android:id="@+id/icPlayThumb"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        app:srcCompat="@drawable/ic_play_thumb"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp" />
+
+
+</com.sound.fbdownloder.ui.custum.SquareLayout>
